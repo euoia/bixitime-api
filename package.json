@@ -29,6 +29,7 @@
     "mysql": "^2.6.2",
     "request": "^2.55.0",
     "require-dir": "^0.3.0",
+    "supervisor": "^0.7.1",
     "winston": "^1.0.0",
     "xml2js": "^0.4.8"
   },

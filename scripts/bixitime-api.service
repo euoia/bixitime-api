@@ -1,0 +1,18 @@
+# systemd service file for bixitime-api
+
+[Unit]
+Description=This is a service which runs bixitime-api
+Documentation=https://github.com/euoia/bixitime-api
+After=network.target
+
+[Service]
+User=james
+Group=james
+LimitNOFILE=65536
+ExecStart=/home/james/.nvm/versions/node/v7.4.0/bin/node -r /var/www/api.bixitime.com/api.js
+KillMode=control-group
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=bixitime-api.service
